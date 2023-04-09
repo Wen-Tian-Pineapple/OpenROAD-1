@@ -306,12 +306,11 @@ void createPGpins(odb::dbBlock* block,
 {
   utl::Logger* logger = new utl::Logger(nullptr);
   odb::dbCreateNetUtil PGpin(logger);
-  PGpin.createPGpin(
-      block,
-      tech,
-      source_net_name,
-      num_connection_points,
-      (odb::dbCreateNetUtil::Position) position);
+  PGpin.createPGpin(block,
+                    tech,
+                    source_net_name,
+                    num_connection_points,
+                    (odb::dbCreateNetUtil::Position) position);
 }
 
 void createConnection(odb::dbBlock* block,
@@ -321,8 +320,7 @@ void createConnection(odb::dbBlock* block,
 {
   utl::Logger* logger = new utl::Logger(nullptr);
   odb::dbCreateNetUtil connect(logger);
-  connect.createCustomConnections(
-      block, net, inst, iterm);
+  connect.createCustomConnections(block, net, inst, iterm);
 }
 
 void dumpAPs(odb::dbBlock* block, const std::string file_name)
