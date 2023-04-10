@@ -219,7 +219,7 @@ class dbCreateNetUtil
   };
   // These 2 functions below are needed by sroute command.
   // create_PGpin would create bterms on the net that is suppose to
-  // get connected to and create_custom_connections would link the cell
+  // get connected to and createCustomConnections would link the cell
   // and the power net/ring
 
   void createPGpin(dbBlock* block,
@@ -227,7 +227,7 @@ class dbCreateNetUtil
                    const char* source_net_name,
                    int num_connection_points,
                    Position position);
-  void create_custom_connections(dbBlock* block,
+  void createCustomConnections(dbBlock* block,
                                  const char* nett,
                                  const char* instt,
                                  const char* itermm);
